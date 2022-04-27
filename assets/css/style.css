@@ -1,0 +1,53 @@
+:root {
+    
+    --border-radius: .3rem;
+  }
+.hero {
+    background-image: url("../img/youarewhatyoulistentoo2.jpg");
+    background-size: cover;
+}
+
+
+
+.result-title {
+    font-size: 24px;
+    color: #f5885c;
+}
+/* CARDS */
+.card {
+    margin: 0 0 0 0;
+    border: 3px solid #000000;
+    border-radius: var(--border-radius);
+  }
+  
+  .card-header {
+    color: #ffffff;
+    background-color: #f5885c;
+    padding: 2.5%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  }
+  
+  .card-body {
+    padding: 2.5%;
+  }
+  
+  /* FORM */
+  .form-label,
+  .form-input,
+  .form-textarea {
+    display: block;
+  }
+  
+  .form-label {
+    font-size: 1.1rem;
+    margin: 0 0 0 5px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 3%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    border: 2px solid #f5885c;
+    border-radius: var(--border-radius);
+  }

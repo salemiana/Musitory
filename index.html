@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href=".\assets\css\style.css">
+    <title>Music Page</title>
+</head>
+
+<body>
+    <section class="hero is-medium has-text-left">
+        <div class="hero-body">
+          <p class="title has-text-white">
+            Musitory
+          </p>
+          <p class="subtitle has-text-white">
+            A Music Database
+          </p>
+        </div>
+      </section>
+
+
+      
+      <div class="columns">
+          <div class="search-boxes column is-4 ml-2">
+      <div class="card mt-3">
+          <h3 class="card-header is-uppercase">Search by Artist</h3>
+          <form id="user-form" class="card-body">
+            <input name="username" id="username" type="text" autofocus="true" class="form-input" placeholder="Enter Artist" />
+            <button type="submit" class="btn">GetArtist</button>
+          </form>
+      </div>
+
+      <div class="card mt-3">
+        <h3 class="card-header is-uppercase">Search by Album</h3>
+        <form id="user-form" class="card-body">
+          <input name="username" id="username" type="text" autofocus="true" class="form-input" placeholder="Enter Album" />
+          <button type="submit" class="btn">GetAlbum</button>
+        </form>
+    </div>
+</div>
+
+<div class="result-box column is-8 mt-3">
+    <h2 class="result-title">Showing Results: <span id="result-search-term"></span></h2>
+    <div id="results-container" class="list-group"></div>
+  </div>
+
+
+</div>
+
+   
+    
+
+
+    
+    
+</body>
+</html>
