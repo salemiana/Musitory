@@ -16,7 +16,7 @@
 /* CARDS */
 .card {
     margin: 0 0 0 0;
-    border: 3px solid #000000;
+    border: 3px solid #f5885c;
     border-radius: var(--border-radius);
   }
   
