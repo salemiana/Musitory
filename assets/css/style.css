@@ -51,3 +51,9 @@
     border: 2px solid #f5885c;
     border-radius: var(--border-radius);
   }
+
+  .song-art {
+    height: 100px;
+    width: 100px;
+
+  }
