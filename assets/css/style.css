@@ -68,3 +68,8 @@
     color: #ffffff;
     border: 2px solid #f5885c;
   }
+
+  p {
+    color: #f5885c;
+    font-weight: bold;
+}
