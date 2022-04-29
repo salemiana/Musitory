@@ -50,22 +50,21 @@ var getArtist = function(artist) {
 //             'X-RapidAPI-Key': '284cc868e3mshb53d5d29c0255a9p11cbc8jsn4a2488211b96'
 //         }
 //     })
-//       .then(function(response) {
-//         // request was successful
-//         if (response.ok) {
-//           console.log(response);
-//           response.json().then(function(data) {
-//             console.log(data);
-//             // displayAlbums(data, artist);
-//           });
-//         } else {
-//           alert('Error: ' + response.statusText);
-//         }
-//       })
-//       .catch(function(error) {
-//         alert('Unable to connect to Musitory');
-//       });
-//   };
+//       
 
   // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
+
+
+//access youtubes api with search
+
+  fetch (
+  'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyD4TLsPdX4tAzlfXR3uB_V2KIYosJvgK1c'), {
+  method: 'GET',
+  headers: {  
+            Accept: 'application/json'
+  }};
+  
+
+    
+  
