@@ -57,3 +57,14 @@
     width: 100px;
 
   }
+
+  .album-title {
+    color: #f5885c;
+    font-weight: bold;
+  }
+
+  .button {
+    background-color: #f5885c;
+    color: #ffffff;
+    border: 2px solid #f5885c;
+  }

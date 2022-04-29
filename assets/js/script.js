@@ -66,11 +66,12 @@ var displayHighlights = function(hits,searchTerm) {
   
       // create a container for each highlight
       var highlightsEl = document.createElement("div");
-      highlightsEl.classList = 'list-item is-flex-direction-row is-justify-content-space-between is-align-content-center';
+      highlightsEl.classList = 'list-item column is-3 is-justify-content-space-between is-align-content-center';
     
   
       // create a span element to hold highlight name
       var titleEl = document.createElement('p');
+      titleEl.classList = 'album-title'
       titleEl.textContent = highlightsName;
   
       // append to container
@@ -87,9 +88,10 @@ var displayHighlights = function(hits,searchTerm) {
 
     var linkEl = document.createElement('a')
     var ButtonEl = document.createElement('button')
+    ButtonEl.classList = 'button is-block'
     linkEl.setAttribute("href", hits[i].result.url)
     linkEl.setAttribute("target","_blank")
-    ButtonEl.textContent = "lyrics";
+    ButtonEl.textContent = "Get lyrics";
 
     linkEl.appendChild(ButtonEl);
 
