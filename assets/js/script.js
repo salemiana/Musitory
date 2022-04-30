@@ -14,6 +14,7 @@ var formSubmitHandler = function(event) {
   
     if (artist) {
       getArtist(artist);
+      searchByKeyword(artist);
   
       // clear old content
       resultsContainerEl.textContent = '';
@@ -56,9 +57,6 @@ var displayHighlights = function(hits,searchTerm) {
     var artist_id = hits[0].result.primary_artist
     // loop over highlights
     for (var i = 0; i < hits.length; i++) {
-
-        
-        
 
       // format highlights name
       var highlightsName = hits[i].result.full_title;
@@ -131,10 +129,22 @@ userFormEl.addEventListener('submit', formSubmitHandler);
 
 
 //get youtube api
- fetch ('https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername=GoogleDevelopers&key=AIzaSyD4TLsPdX4tAzlfXR3uB_V2KIYosJvgK1c')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-        });
+    
+  function searchByKeyword(artist) { 
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com',
+        'X-RapidAPI-Key': 'f9fa5ec95cmsha156214863c7e4dp16eefejsn65733400f7ba'
+      }
+    }
+    
+    fetch('https://youtube-v31.p.rapidapi.com/search?q='+ artist +'&part=snippet%2Cid&regionCode=US&maxResults=5&order=date', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
 
+
+  };
+  
 
