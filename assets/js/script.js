@@ -128,3 +128,13 @@ var displayHighlights = function(hits,searchTerm) {
 
   // add event listeners to forms
 userFormEl.addEventListener('submit', formSubmitHandler);
+
+
+//get youtube api
+ fetch ('https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername=GoogleDevelopers&key=AIzaSyD4TLsPdX4tAzlfXR3uB_V2KIYosJvgK1c')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        });
+
+
