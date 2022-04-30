@@ -3,12 +3,20 @@ var artistInputEl = document.querySelector('#artist');
 var albumInputEl = document.querySelector('#album');
 var resultsContainerEl = document.querySelector('#results-container');
 var resultSearchTerm = document.querySelector('#result-search-term');
+var hideInfoBoxesEl = document.querySelectorAll('.info-boxes');
+//var btn = document.querySelector('#button')
+
 
 
 var formSubmitHandler = function(event) {
     // prevent page from refreshing
     event.preventDefault();
-  
+
+    
+   //hide info boxes
+   hideInfoBoxesEl.forEach(el => el.setAttribute("style", "display:none"));
+       
+
     // get value from input element
     var artist = artistInputEl.value.trim();
   
@@ -21,6 +29,8 @@ var formSubmitHandler = function(event) {
     } else {
       alert('Please enter an artist');
     }
+    
+    
   };
 
 
@@ -98,9 +108,22 @@ var displayHighlights = function(hits,searchTerm) {
     highlightsEl.appendChild(linkEl);
       // append container to the dom
     resultsContainerEl.appendChild(highlightsEl);
+
+    
         
     }
 };
+
+// var showHide = function() {
+//     var div = document.getElementById('#info-boxes');
+//     if (div.style.display == 'none') {
+//       div.style.display = '';
+//     }
+//     else {
+//       div.style.display = 'none';
+//     }
+//   }
+
 
 
     // var apiURL = "https://genius.p.rapidapi.com/" + artist + "/:id/songs"
