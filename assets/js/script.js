@@ -165,7 +165,7 @@ userFormEl.addEventListener('submit', formSubmitHandler);
       }
     }
     
-    fetch('https://youtube-v31.p.rapidapi.com/search?q='+ artist +'&part=snippet%2Cid&regionCode=US&maxResults=5&order=date', options)
+    fetch('https://youtube-v31.p.rapidapi.com/search?q='+ artist +'songs&part=id%2Cid&regionCode=US&maxResults=5', options) //&order=date
       .then(response => response.json())
       .then(data => {
         console.log(data)
