@@ -179,7 +179,7 @@ userFormEl.addEventListener('submit', formSubmitHandler);
 var displayArtistVideo = function(items) {
     // check if api returned any highlights
     if (items.length === 0) {
-        youtubeContainerEl.textContent = 'No songs found.';
+        youtubeContainerEl.textContent = 'No videos found.';
         return;
       }
 
