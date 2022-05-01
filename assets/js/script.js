@@ -4,6 +4,7 @@ var albumInputEl = document.querySelector('#album');
 var resultsContainerEl = document.querySelector('#results-container');
 var resultSearchTerm = document.querySelector('#result-search-term');
 var hideInfoBoxesEl = document.querySelectorAll('.info-boxes');
+var youtubeContainerEl = document.querySelector('#youtube-container');
 //var btn = document.querySelector('#button')
 
 
@@ -27,6 +28,8 @@ var formSubmitHandler = function(event) {
       // clear old content
       resultsContainerEl.textContent = '';
       artistInputEl.value = '';
+
+      youtubeContainerEl.textContent = '';
     } else {
       alert('Please enter an artist');
     }
@@ -64,7 +67,7 @@ var displayHighlights = function(hits,searchTerm) {
     }
   
     resultSearchTerm.textContent = searchTerm;
-    var artist_id = hits[0].result.primary_artist
+    //var artist_id = hits[0].result.primary_artist
     // loop over highlights
     for (var i = 0; i < hits.length; i++) {
 
@@ -164,10 +167,34 @@ userFormEl.addEventListener('submit', formSubmitHandler);
     
     fetch('https://youtube-v31.p.rapidapi.com/search?q='+ artist +'&part=snippet%2Cid&regionCode=US&maxResults=5&order=date', options)
       .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-
-
-  };
+      .then(data => {
+        console.log(data)
+        displayArtistVideo(data.items, artist)
+    })
+    //.then(response => console.log(response))
+    .catch(err => console.error(err));
+    //displayHighlights(data, artist)
+}
   
+var displayArtistVideo = function(items) {
+    // check if api returned any highlights
+    if (items.length === 0) {
+        youtubeContainerEl.textContent = 'No songs found.';
+        return;
+      }
 
+      for (var i = 0; i < items.length; i++) {
+
+        // format highlights name
+        var videoId = items[i].id.videoId;
+        console.log(videoId);
+
+        var youtubeEl = document.createElement("iframe");
+        youtubeEl.setAttribute("src", "https://www.youtube.com/embed/" + videoId);
+        youtubeEl.style.width = "300px";
+        youtubeEl.style.height = "200px";
+        youtubeContainerEl.appendChild(youtubeEl);
+
+}
+
+}
