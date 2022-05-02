@@ -1,1 +1,1 @@
-# project-01
+So I attempted to try to add a filter to you know filter the results. Did not work as intended. Maybe someone could look where I went wrong or let me know it was a lost cause from the begining. If there is something else you rather me do let me know.
