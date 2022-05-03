@@ -178,14 +178,9 @@ userFormEl.addEventListener('submit', formSubmitHandler);
     
     fetch('https://youtube-v31.p.rapidapi.com/search?q='+ artist +'songs&part=id%2Cid&regionCode=US&maxResults=5', options) //&order=date
       .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        displayArtistVideo(data.items, artist)
-    })
-    //.then(response => console.log(response))
-    .catch(err => console.error(err));
-    //displayHighlights(data, artist)
-}
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+  };
   
 var displayArtistVideo = function(items) {
     // check if api returned any highlights
