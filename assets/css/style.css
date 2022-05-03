@@ -9,8 +9,9 @@
 
 
 
-.result-title {
-    font-size: 24px;
+h2 {
+    font-size: 32px;
+    font-weight: bolder;
     color: #f5885c;
 }
 /* CARDS */
@@ -68,6 +69,7 @@
     color: #ffffff;
     border: 2px solid #f5885c;
   }
+
 
   p {
     color: #f5885c;

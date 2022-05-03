@@ -5,13 +5,22 @@ var resultsContainerEl = document.querySelector('#results-container');
 var resultSearchTerm = document.querySelector('#result-search-term');
 var hideInfoBoxesEl = document.querySelectorAll('.info-boxes');
 var youtubeContainerEl = document.querySelector('#youtube-container');
+var resultTitleEl = document.querySelector('.youtube-title');
+var artist_BTN = "btn btn-info border text-left px-3 py-2";
+var HISTORY_DATA = "artist-data";
+var HISTORY_ARTIST = 'artistSearchHistory';
 //var btn = document.querySelector('#button')
 
-
+var history = JSON.parse(localStorage.getItem(HISTORY_ARTIST));
+if (!history) {
+  history = [];
+}
 
 var formSubmitHandler = function(event) {
     // prevent page from refreshing
     event.preventDefault();
+
+ 
 
     
    //hide info boxes
@@ -20,6 +29,8 @@ var formSubmitHandler = function(event) {
 
     // get value from input element
     var artist = artistInputEl.value.trim();
+    //add artist to History
+    // addArtistHistory(artist);
   
     if (artist) {
       getArtist(artist);
@@ -66,7 +77,7 @@ var displayHighlights = function(hits,searchTerm) {
       return;
     }
   
-    resultSearchTerm.textContent = searchTerm;
+    resultSearchTerm.textContent = 'Showing Top 10 Songs for: ' + searchTerm;
     //var artist_id = hits[0].result.primary_artist
     // loop over highlights
     for (var i = 0; i < hits.length; i++) {
@@ -183,6 +194,8 @@ var displayArtistVideo = function(items) {
         return;
       }
 
+      resultTitleEl.textContent = 'Artist Youtube Videos:';
+
       for (var i = 0; i < items.length; i++) {
 
         // format highlights name
@@ -198,3 +211,27 @@ var displayArtistVideo = function(items) {
 }
 
 }
+
+function artistHistory() {
+    // clear artist history
+    let searchHistory = $("#artist-history").empty();
+  
+    // for each item in history array
+    history.forEach(artist => {
+      // create a button and add classes/attributes
+      let btn = $("<button>").addClass(artist_BTN);
+      btn.attr(HISTORY_DATA, artist);
+      btn.text(artist);
+      // append button to search history
+      searchHistory.append(btn);
+    });
+  }
+  
+  function addArtistHistory(artist) {
+    // not to add artist in history twice
+    if (!history.includes(artist)) {
+      history.push(artist);
+      localStorage.setItem(HISTORY_ARTIST, JSON.stringify(history));
+      artistHistory();
+    } 
+  }
