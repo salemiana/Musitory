@@ -1,34 +1,35 @@
 :root {
-    
+  
     --border-radius: .3rem;
   }
 body {
-  background: rgb(135,135,135);
-  background: linear-gradient(90deg, rgba(135,135,135,1) 0%, rgba(254,248,248,1) 49%, rgba(199,199,199,1) 100%);
+  background: rgb(148,148,142);
+  background: linear-gradient(90deg, rgba(148,148,142,1) 0%, rgba(194,190,188,0.5914740896358543) 39%, rgba(224,224,222,0.5522584033613445) 100%);
 }
 
 .hero {
     background-image: url("../img/youarewhatyoulistentoo4.jpg");
     background-size: cover;
-
-
+    
 }
 
 h2 {
     font-size: 32px;
     font-weight: bolder;
-    color: #f5885c;
+    color: rgb(171,90,31);
 }
 /* CARDS */
 .card {
     margin: 0 0 0 0;
-    border: 3px solid #f5885c;
+    border: 3px solid rgb(171,90,31);
+    background: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);;
     border-radius: var(--border-radius);
   }
   
   .card-header {
     color: #ffffff;
-    background-color: #f5885c;
+    background-color: rgb(171,90,31);
+    background-color: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);
     padding: 2.5%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
   }
@@ -54,7 +55,7 @@ h2 {
     padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
-    border: 2px solid #f5885c;
+    border: 2px solid rgb(171,90,31) linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);;
     border-radius: var(--border-radius);
   }
 
@@ -65,32 +66,25 @@ h2 {
   }
 
   .album-title {
-    color: #f5885c;
+    color: rgb(171,90,31) ;
     font-weight: bold;
   }
 
   .button {
-    background-color: #f5885c;
+    background: rgb(171,90,31);
     color: #ffffff;
-    border: 2px solid #f5885c;
+    border: 2px solid ;
   }
 
 
   p {
-    color: #f5885c;
+    color: rgb(171,90,31);
     font-weight: bold;
 }
 
 .foot {
- background-image: url('../img/8ofthedecadeFoot2.jpg');
- background-size: contain;
+  background-image: url("../img/footer.png");
+  background-size: cover;
   height: 150px;
 }
 
-.footp {
-  color:#f5885c;
-  font-size: 25px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
