@@ -83,3 +83,8 @@ h2 {
   overflow-x: hidden;
   overflow-y: auto; 
 }
+
+.hero-body{
+font-family:cursive;
+text-align: center;
+}
