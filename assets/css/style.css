@@ -21,15 +21,15 @@ h2 {
 /* CARDS */
 .card {
     margin: 0 0 0 0;
-    border: 3px solid rgb(171,90,31);
+    background:  rgb(171,90,31);
     background: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);;
     border-radius: var(--border-radius);
   }
   
   .card-header {
     color: #ffffff;
-    background-color: rgb(171,90,31);
-    background-color: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);
+    background: rgb(171,90,31);
+    background: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);
     padding: 2.5%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
   }
@@ -81,10 +81,10 @@ h2 {
     color: rgb(171,90,31);
     font-weight: bold;
 }
-
+/* 
 .foot {
   background-image: url("../img/footer.png");
   background-size: cover;
   height: 150px;
-}
+} */
 
