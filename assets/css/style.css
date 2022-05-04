@@ -13,15 +13,28 @@ body {
   
 }
 
-.title {
-  font-size: 50px;
-
-}
-
-.hero {
+.hero1 {
     background-image: url("../img/youarewhatyoulistentoo4.jpg");
     background-size: cover;
+    height: 350px;
+    width: 100%
   
+}
+
+.herobody1{
+padding: 50px;
+
+}
+.title {
+  font-size: 50px;
+  color: #ffffff;
+  ;
+}
+.subtitle {
+  color: #ffffff;
+  font-size: 25px;
+  padding-left: 50px;
+
 }
 
 h2 {
@@ -99,4 +112,35 @@ h2 {
   background-size: cover;
   height: 150px;
 } */
+@media screen  and (max-width: 1200px) {
+  .hero1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
 
+  .herobody1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .hero1 {
+    background-image: url("../img/youarewhatyoulistentoo4.jpg");
+    height:200px;
+    display:flex; 
+  }
+
+  .herobody1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    align-content: flex-end;
+}
+  }
+
+  .subtitle {
+    padding: 0px
+  }
+}
