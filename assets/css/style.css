@@ -2,14 +2,26 @@
   
     --border-radius: .3rem;
   }
+  @font-face {
+    font-family: "FSP Demo";
+    src: url("../font/Fontspring-DEMO-relapse-regular.otf")
+  }
 body {
   background: rgb(148,148,142);
   background: linear-gradient(90deg, rgba(148,148,142,1) 0%, rgba(194,190,188,0.5914740896358543) 39%, rgba(224,224,222,0.5522584033613445) 100%);
+  font-family: "FSP Demo";
+  
+}
+
+.title {
+  font-size: 50px;
+
 }
 
 .hero {
     background-image: url("../img/youarewhatyoulistentoo4.jpg");
     background-size: cover;
+    display:flex;
     
 }
 
@@ -73,6 +85,7 @@ h2 {
   .button {
     background: rgb(171,90,31);
     color: #ffffff;
+    font-family: "FSP Demo";
     border: 2px solid ;
   }
 
