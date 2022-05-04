@@ -106,12 +106,14 @@ h2 {
     color: rgb(171,90,31);
     font-weight: bold;
 }
-/* 
-.foot {
-  background-image: url("../img/footer.png");
-  background-size: cover;
-  height: 150px;
-} */
+
+.history-scrollable {
+  position: relative;
+  max-height: calc(100vh - 142px); 
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
 @media screen  and (max-width: 1200px) {
   .hero1 {
     display: flex;
@@ -138,7 +140,7 @@ h2 {
     justify-content: center;
     align-content: flex-end;
 }
-  }
+  
 
   .subtitle {
     padding: 0px
