@@ -1,0 +1,148 @@
+:root {
+  
+    --border-radius: .3rem;
+  }
+  @font-face {
+    font-family: "FSP Demo";
+    src: url("../font/Fontspring-DEMO-relapse-regular.otf")
+  }
+body {
+  background: rgb(148,148,142);
+  background: linear-gradient(90deg, rgba(148,148,142,1) 0%, rgba(194,190,188,0.5914740896358543) 39%, rgba(224,224,222,0.5522584033613445) 100%);
+  font-family: "FSP Demo";
+  
+}
+
+.hero1 {
+    background-image: url("../img/youarewhatyoulistentoo4.jpg");
+    background-size: cover;
+    height: 350px;
+    width: 100%
+  
+}
+
+.herobody1{
+padding: 50px;
+
+}
+.title {
+  font-size: 50px;
+  color: #ffffff;
+  ;
+}
+.subtitle {
+  color: #ffffff;
+  font-size: 25px;
+  padding-left: 50px;
+
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: rgb(171,90,31);
+}
+/* CARDS */
+.card {
+    margin: 0 0 0 0;
+    background:  rgb(171,90,31);
+    background: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);;
+    border-radius: var(--border-radius);
+  }
+  
+  .card-header {
+    color: #ffffff;
+    background: rgb(171,90,31);
+    background: linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);
+    padding: 2.5%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  }
+  
+  .card-body {
+    padding: 2.5%;
+  }
+  
+  /* FORM */
+  .form-label,
+  .form-input,
+  .form-textarea {
+    display: block;
+  }
+  
+  .form-label {
+    font-size: 1.1rem;
+    margin: 0 0 0 5px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 3%;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    border: 2px solid rgb(171,90,31) linear-gradient(90deg, rgba(171,90,31,1) 0%, rgba(255,172,108,0.5914740896358543) 39%, rgba(168,168,167,0.5522584033613445) 100%);;
+    border-radius: var(--border-radius);
+  }
+
+  .song-art {
+    height: 100px;
+    width: 100px;
+
+  }
+
+  .album-title {
+    color: rgb(171,90,31) ;
+    font-weight: bold;
+  }
+
+  .button {
+    background: rgb(171,90,31);
+    color: #ffffff;
+    font-family: "FSP Demo";
+    border: 2px solid ;
+  }
+
+
+  p {
+    color: rgb(171,90,31);
+    font-weight: bold;
+}
+
+.history-scrollable {
+  position: relative;
+  max-height: calc(100vh - 142px); 
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
+@media screen  and (max-width: 1200px) {
+  .hero1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .herobody1 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 485px) {
+  .hero1 {
+    background-image: url("../img/youarewhatyoulistentoo4.jpg");
+    height:200px;
+    display:flex; 
+  }
+
+  .herobody1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    align-content: flex-end;
+}
+  
+
+  .subtitle {
+    padding: 0px
+  }
+}
