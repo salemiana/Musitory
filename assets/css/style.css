@@ -21,8 +21,7 @@ body {
 .hero {
     background-image: url("../img/youarewhatyoulistentoo4.jpg");
     background-size: cover;
-    display:flex;
-    
+  
 }
 
 h2 {
