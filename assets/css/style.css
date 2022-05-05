@@ -114,8 +114,6 @@ h2 {
   overflow-y: auto; 
 }
 
-<<<<<<< HEAD
-=======
 @media screen  and (max-width: 1200px) {
   .hero1 {
     display: flex;
@@ -148,4 +146,3 @@ h2 {
     padding: 0px
   }
 }
->>>>>>> 36365509811b311245ecce6b06e78f2f7ad92e17
