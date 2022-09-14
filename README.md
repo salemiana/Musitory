@@ -1,11 +1,44 @@
-# Musitory - a music database app
 
+
+<h1 align="center">Musitory</h1>
+
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+
+
+## Table of contents
+- [Description](#description)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Installation](#installation)
+- [Tests](#tests)
+- [Questions](#questions)
+- [License](#license)
+    
+    
 ## Description
+A music  database app that lets users choose any song by artist name
 
-* A music app that lets user choose any song by artist name
+## Usage
+HTML, CSS
 
-* When a song choice is clicked, it opens up a new page where the song can play, lyrics gets displayed, brief story of the artist, and a search option for more
+## Contribution
+ McKinley, West, Salem
 
-* When user clicks search option, youTube display is available
+## Installation
 
-* 
+
+## Tests
+
+
+## License
+MIT
+
+
+## Questions
+Contact <br />
+github: https://github.com/salemiana/Musitory <br />
+deploy: https://salemiana.github.io/Musitory/
+
+
+
+
